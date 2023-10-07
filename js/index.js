@@ -1,29 +1,25 @@
-    let num1 = prompt('Enter the first number');
-        if ( isNaN(num1) ) {
-            alert('You can only enter numbers');
-            num1 = prompt('try again')
-        }
+    let number1;
+    let number2;
+    let number3;
 
-    let num2 = prompt('Enter the second number');
-        if ( isNaN(num2) ) {
-            alert('You can only enter numbers');
-            num2 = prompt('try again')
-        }
+    do {
+        number1 = prompt('Enter the first number');
+    } while ( isNaN(number1) );
 
-    let num3 = prompt('Enter the third number');
-        if ( isNaN(num3) ) {
-            alert('You can only enter numbers');
-            num3 = prompt('try again')
-        }
+    do {
+        number2 = prompt('Enter the second number');
+    } while ( isNaN(number2) );
 
-    num1 = Number(num1);
-    num2 = Number(num2);
-    num3 = Number(num3);
+    do {
+        number3 = prompt('Enter the third number');
+    } while ( isNaN(number3) );
 
-    let average = (num1 + num2 + num3)/3;
+    const convertedData1 = Number(number1);
+    const convertedData2 = Number(number2);
+    const convertedData3 = Number(number3);
+
+    let average = (convertedData1 + convertedData2 + convertedData3)/3;
 
     if (average) {
-        alert(average + '- the arithmetic mean of these numbers');
-    } else {
-        alert('You have provided incorrect data, please reload the page')
+        alert(`${average} - the arithmetic mean of these numbers`);
     }
